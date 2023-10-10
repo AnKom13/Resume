@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Резюме</title>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="grid-item item-1">Андрей Комлев</div>
+        <div class="grid-item item-2"><a href="#prof">Профиль</a></div>
+        <div class="grid-item item-3"><a href="#education">Образование</a></div>
+        <div class="grid-item item-4"><a href="#skills">Навыки</a></div>
+        <div class="grid-item item-5"><a href="#work">Место работы</a></div>
+
+        <div class="grid-item foto">
+			<img src="img\volk.jpg" alt="Фото" class="image" style="float: left;border-radius: 15px;">
+		</div>
+        <div class="grid-item contact" >
+            <p>Контакты:<br><br>
+                    Телефон: <br>+7(921) 12-34-567<br><br></li>
+                    Почта: <br>ankom@list.ru</li>
+                <p>
+        </div>
+        <div class="grid-item base">
+            <button type="button" class="collapsible" id="prof">Профиль</button>
+            <div class="cont" >
+                <p><quote>"Я умный, красивый, в меру упитанный мужчина, ну в полном расцвете сил."</quote></p>
+            </div>
+            <button type="button" class="collapsible" id="education">Образование</button>
+            <div class="cont">
+                <ul>
+                    <li>Высшее: Петрозаводский Государственный Университет математический факультет 1999 </li>
+                    <li>Курсы: Полный курс по анализу данных, Fullstack разработчик на Python<il>
+                </ul>
+            </div>
+            <button type="button" class="collapsible" id="skills">Навыки</button>
+            <div class="cont">
+                <ul>
+                    <li>СУБД: Oracle, Postgrees, SQLite</li>
+                    <li>Языки программирования: Python, PL/SqL, javascript, Visual Baisic, Pascal, Perl<il>
+                    <li>IDE: Pycharm, Visual Studio</li>
+                    <li>Прочее: SQL, GIt, Django</li>    
+                </ul>
+            </div>
+            <button type="button" class="collapsible" id="work">Место работы</button>
+            <div class="cont1">
+                <div class="timeline">
+                    <div class="container left">
+                      <div class="content">
+                        <h2>2015-20022</h2>
+                        <p>заместитель начальника отдела статистической информации и контроля ИЦ МВД по Республике Карелии</p>
+                      </div>
+                    </div>
+                    <div class="container right">
+                      <div class="content">
+                        <h2>2003-20015</h2>
+                        <p>начальник отделения статистической информации отдела статистической информации, контроля, специальных фондов ИЦ МВД по Республике Карелии</p>
+                      </div>
+                    </div>
+                    <div class="container left">
+                      <div class="content">
+                        <h2>2003</h2>
+                        <p>старший инженер-программист отделения обработки информации отдела обработки информации, внедрения программного обеспечения и обслуживания ЛВС ВЦ ИЦ при МВД Карелии</p>
+                      </div>
+                    </div>
+                    <div class="container right">
+                      <div class="content">
+                        <h2>2001-2003</h2>
+                        <p>инженер-программист отделения обработки информации ВЦ ИЦ МВД Карелии</p>
+                      </div>
+                    </div>
+                    <div class="container left">
+                      <div class="content">
+                        <h2>2000-2001</h2>
+                        <p>инженер-программист отделения программного обеспечения Отдела программирования и обработки информации ВЦ ИЦ МВД Карелии</p>
+                      </div>
+                    </div>
+                    <div class="container right">
+                      <div class="content">
+                        <h2>1999-2000</h2>
+                        <p>стажер по должности инженера-программиста отделения программного обеспечения Отдела программирования и обработки информации ВЦ ИЦ МВД Карелии</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+</div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+            coll[i].nextElementSibling.style.display = "none"
+        }
+        
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var con = this.nextElementSibling;
+            if (con.style.display === "block") {
+              con.style.display = "none";
+            } else {
+              con.style.display = "block";
+            }
+          });
+        }
+    </script>
+
+</body>
+</html>    
